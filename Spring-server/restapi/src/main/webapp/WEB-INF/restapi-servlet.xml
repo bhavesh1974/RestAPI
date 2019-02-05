@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/data/mongo
+		http://www.springframework.org/schema/data/mongo/spring-mongo-2.0.xsd	
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+		
+		<mvc:annotation-driven />
+		<context:component-scan base-package="com.bhaveshshah.restapi"></context:component-scan>
+	 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	        <property name="locations">
+	        <list>
+	            <value>/WEB-INF/jdbc.properties</value>
+	            <value>/WEB-INF/mongo.properties</value>
+	            <value>/WEB-INF/application.properties</value>
+			</list>	            
+	        </property>
+	    </bean>
+		<context:property-placeholder properties-ref="configProperties" />
+		<bean id="viewer" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+			<property name="prefix" value="/WEB-INF/jsp/" />
+			<property name="suffix" value=".jsp" />
+		</bean>	
+		<bean id="dataSource"
+			class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName" value="${jdbc.driverClassName}" />
+			<property name="url" value="${jdbc.url}" />
+			<property name="username" value="${jdbc.username}" />
+			<property name="password" value="${jdbc.password}" />
+		</bean>
+		<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
+			<property name="dataSource" ref="dataSource"></property>  
+		</bean>  
+		<bean id="multipartResolver"
+			class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+			<property name="maxUploadSize" value="${file.maxUploadSize}" />
+		</bean>		
+		<mvc:cors>
+		    <mvc:mapping path="/**"
+		        allowed-origins="*"
+		        allowed-methods="GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS"
+		        allowed-headers="Origin, X-Requested-With, Content-Type, Accept, Authorization"
+		        exposed-headers="Origin,Access-Control-Request-Method,Access-Control-Allow-Origin,Access-Control-Allow-Credentials"
+		        max-age="10000" />
+		</mvc:cors>	
+		<mvc:interceptors>
+ 			<bean class="com.bhaveshshah.restapi.service.AuthenticationInterceptor" /> 
+		</mvc:interceptors>		
+
+		<mvc:resources order="1" location="/resources/" mapping="/resources/**" />
+		<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+		<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+		<mvc:default-servlet-handler />
+
+ 		<mongo:mongo-client host="${mongo.url}" port="${mongo.port}" id="mongo" />  
+		<mongo:db-factory dbname="${mongo.database}" mongo-ref="mongo" id="mongoDbFactory" />
+		<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+			<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		</bean>
+</beans>
