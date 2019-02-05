@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar-header-padding {
+  padding: "0px";
+}
+
+.navbar-header-left {
+  background-color: rgb(57, 121, 218);
+  width: 150px;
+  text-align: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  background-color: #3f8dce;
+  overflow-x: hidden;
+}
+
+.sidenav a {
+  padding: 0px 0px 0px 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidenav a:hover {
+  color: gray;
+}
+
+.sidenav ul {
+  padding-left: 0;
+}
+
+.sidenav li {
+  padding: 10px 0px 0px 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  color: white;
+  height: 50px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: black;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  height: 50px;
+}
+
+.navbar-nav > li > button {
+  line-height: 20px;
+}

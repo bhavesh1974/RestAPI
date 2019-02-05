@@ -1,0 +1,5 @@
+<div *ngIf="control._parent.submitted && control.invalid">
+  <div *ngIf="control.errors.required">* {{ label }} is required.</div>
+  <div *ngIf="control.errors.minlength">* {{ label }}&nbsp;{{ lengthMsg }}</div>
+  <div *ngIf="control.errors.mustMatch">Passwords must match</div>
+</div>

@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+    <div *ngIf="signupSuccess != ''" class="alert alert-success">
+      {{ signupSuccess }}
+    </div>
+    <div *ngIf="signupStatus == ''">
+      <div *ngIf="signupError != ''" class="alert alert-danger">
+        {{ signupError }}
+      </div>
+      <form
+        (ngSubmit)="onSignup(f)"
+        #f="ngForm"
+        [mustMatch]="['password', 'confirmpassword']"
+      >
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [ngModel]="default.email"
+            #email="ngModel"
+            required
+            class="form-control"
+          />
+          <form-control-error
+            [control]="email"
+            [label]="'Email'"
+          ></form-control-error>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [ngModel]="default.password"
+            #password="ngModel"
+            required
+            minlength="8"
+            class="form-control"
+          />
+          <form-control-error
+            [control]="password"
+            [label]="'Password'"
+            lengthMsg="must be at least 8 characters"
+          ></form-control-error>
+        </div>
+        <div class="form-group">
+          <label for="password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmpassword"
+            name="confirmpassword"
+            [ngModel]="default.confirmpassword"
+            #confirmpassword="ngModel"
+            required
+            minlength="8"
+            class="form-control"
+          />
+          <form-control-error
+            [control]="confirmpassword"
+            [label]="'Confirm Password'"
+            lengthMsg="must be at least 8 characters"
+          ></form-control-error>
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            [ngModel]="default.firstName"
+            #firstName="ngModel"
+            required
+            minlength="2"
+            class="form-control"
+          />
+          <form-control-error
+            [control]="firstName"
+            [label]="'First Name'"
+            [lengthMsg]="'must be at least 2 characters'"
+          ></form-control-error>
+        </div>
+        <div class="form-group">
+          <label for="firstName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            [ngModel]="default.lastName"
+            #lastName="ngModel"
+            required
+            minlength="2"
+            class="form-control"
+          />
+          <form-control-error
+            [control]="lastName"
+            [label]="'Last Name'"
+            [lengthMsg]="'must be at least 2 characters'"
+          ></form-control-error>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            [ngModel]="default.phone"
+            #phone="ngModel"
+            required
+            minlength="7"
+            class="form-control"
+          />
+          <form-control-error
+            [control]="phone"
+            [label]="'Phone'"
+            [lengthMsg]="'must be at least 7 numbers'"
+          ></form-control-error>
+        </div>
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>

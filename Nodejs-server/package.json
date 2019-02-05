@@ -1,0 +1,38 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon app.js"
+  },
+  "author": "Bhaveshkumar Shah",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cycle": "^1.0.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.4.0",
+    "moment": "^2.23.0",
+    "mongoose": "^5.4.9",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "node-rest-client": "^3.1.0",
+    "nodemailer": "^5.0.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "shortid": "^2.2.14",
+    "swagger-jsdoc": "^3.2.6",
+    "uuid": "^3.3.2",
+    "video-indexer": "^1.0.0",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^3.5.1"
+  }
+}

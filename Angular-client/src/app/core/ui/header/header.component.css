@@ -1,0 +1,45 @@
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  color: white;
+  height: 50px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: black;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  height: 50px;
+}
+
+.navbar-nav>li>button {
+  line-height: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-top: 8px;
+}
+
+.circle {
+  background: linear-gradient(orange, blue);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+  margin: 15px 15px;
+  font-size: 10px;
+  padding: 15px;
+  display: flex;
+  height: 20px;
+  width: 20px;
+  color: #fff;
+}
+
+.search {
+  flex: 1;
+}

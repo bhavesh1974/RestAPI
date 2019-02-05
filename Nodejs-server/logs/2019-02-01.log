@@ -1,0 +1,13 @@
+[01-02-2019 06:06:32:752 PM] - [INFO] - -------- Starting Application --------   8080 01-02-2019 06:06:32:750 PM
+[01-02-2019 06:06:32:771 PM] - [INFO] - connected as id 666
+[01-02-2019 11:40:39:582 PM] - [INFO] - -------- Starting Application --------   8080 01-02-2019 11:40:39:580 PM
+[01-02-2019 11:40:39:594 PM] - [INFO] - connected as id 667
+[01-02-2019 11:45:07:978 PM] - [INFO] - -------- Starting Application --------   8080 01-02-2019 11:45:07:975 PM
+[01-02-2019 11:45:08:004 PM] - [INFO] - connected as id 668
+[01-02-2019 11:45:15:568 PM] - [WARN] - User not found
+[01-02-2019 11:45:15:577 PM] - [ERROR] - User login error 	{"status":400}
+[01-02-2019 11:46:43:563 PM] - [WARN] - User not found
+[01-02-2019 11:46:43:574 PM] - [ERROR] - User login error 	{"status":400}
+[01-02-2019 11:46:52:928 PM] - [WARN] - User not found
+[01-02-2019 11:46:52:937 PM] - [ERROR] - User login error 	{"status":400}
+[01-02-2019 11:47:28:836 PM] - [INFO] - Mail service is disabled.

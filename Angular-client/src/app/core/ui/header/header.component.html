@@ -1,0 +1,61 @@
+<nav class="navbar navbar-fixed-top navbar-default" style="padding: 0px;">
+  <div class="container-fluid" style="padding: 0px;">
+    <div
+      class="navbar-header"
+      style="background-color: rgb(57, 121, 218); width: 150px; text-align: center;"
+    >
+      <a routerLink="/" class="navbar-brand">&nbsp;Ng-Client</a>
+    </div>
+
+    <ng-template [ngIf]="authService.isAuthenticated()">
+      <ul class="nav navbar-nav" style="margin-left: 10px; margin-top: 5px">
+        <li>
+          <input class="form-control search" type="text" placeholder="Search" />
+        </li>
+      </ul>
+    </ng-template>
+
+    <ul class="nav navbar-nav navbar-right" style="margin-right:15px;">
+      <ng-template [ngIf]="!authService.isAuthenticated()">
+        <li>
+          <a routerLink="/user/signup"
+            ><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Sign Up</a
+          >
+        </li>
+        <li>
+          <a routerLink="/auth/signin"
+            ><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Sign In</a
+          >
+        </li>
+      </ng-template>
+
+      <ng-template [ngIf]="authService.isAuthenticated()">
+        <li dropdown show>
+          <a dropdownToggle role="button"
+            >{{ authService.userName }}&nbsp;<span class="caret"></span
+          ></a>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li><a routerLink="/user/updateProfile">Update Profile</a></li>
+            <li><a routerLink="/user/uploadPicture">Upload Picture</a></li>
+            <li><a routerLink="/user/changePassword">Change Password</a></li>
+            <li>
+              <a
+                style="cursor: pointer;"
+                (click)="onLogout()"
+                *ngIf="authService.isAuthenticated()"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-right: 20px">
+          <img
+            class="avatar"
+            [src]="authService.imageToShow"
+            *ngIf="authService.imageToShow"
+          />
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

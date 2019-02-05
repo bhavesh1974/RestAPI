@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="avatar">Select Picture</label>
+    <input
+      #fileSelect
+      type="file"
+      (change)="selectedFiles = fileSelect.files"
+    />
+  </div>
+  <button [disabled]="!selectedFiles" type="submit" class="btn btn-primary">
+    Submit
+  </button>
+</form>
