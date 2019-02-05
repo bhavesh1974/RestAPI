@@ -18,4 +18,4 @@ Spring, Swagger, Jackson, log4j, Mongo, MySql, JWT, Bootstrap, file upload
 
 It is just initial code to start project on any of above technologies. There is a LOT to improve in the code and I leave up to you to do you best for this.
 
-MORE IS COMING UP...HANG IN THERE...:)
+MORE COMING UP...HANG IN THERE...:)
