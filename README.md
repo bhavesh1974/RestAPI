@@ -1,6 +1,6 @@
 # RestAPI
 It includes Frontend developed in Angular and React.
-It includes Backend (RESTAPI) developed in Node.js and Java. You can use Mongo or MySQL as a database. 
+It includes Backend (RESTAPI) developed in Node.js and Java/Spring. You can use Mongo or MySQL as a database. 
      You need to set property in the config/config.js (Node.js) or WEB-INF/application.properties. 
      
 Angular:
@@ -16,6 +16,6 @@ Java
 Spring, Swagger, Jackson, log4j, Mongo, MySql, JWT, Bootstrap, file upload
 
 
-It is just initial code to start project on any of above technologies. There is a LOT to improve in the code and I leave up to you to do you best for this.
+It is just initial code to start project on any of above technologies. There is a LOT to improve in the code and I leave up to you to do your best for this. ** Please note that it is not about fancy UI. It is about how things can be done in Angular, React, Node.js or Java/Spring. **
 
 MORE COMING UP...HANG IN THERE...:)
