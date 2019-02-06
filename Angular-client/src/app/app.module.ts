@@ -13,10 +13,11 @@ import { AppBootstrapModule } from "./appbootstrap.module";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ApiInterceptor } from "./core/services/api.interceptor";
 import { UserModule } from "./user/user.module";
-import { AuthGuard } from "./auth/services/auth-guard.service";
+import { AuthGuard } from "./core/services/auth-guard.service";
 import { NgFlashMessagesModule } from "ng-flash-messages";
 import { FlashService } from "./core/services/flash.service";
 import { SidebarComponent } from "./core/ui/sidebar/sidebar.component";
+import { SalesModule } from "./sales/sales.module";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SidebarComponent } from "./core/ui/sidebar/sidebar.component";
     FormsModule,
     UserModule,
     AuthModule,
+    SalesModule,
     AppBootstrapModule,
     NgxSpinnerModule,
     NgFlashMessagesModule.forRoot()

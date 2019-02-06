@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { routerNgProbeToken } from "@angular/router/src/router_module";
-import { AuthService } from "src/app/auth/services/auth.service";
+import { AuthService } from "src/app/auth/auth.service";
 import { ApiService } from "src/app/core/services/api.service";
 import { NgxSpinnerService } from "ngx-spinner";
 

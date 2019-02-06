@@ -1,0 +1,94 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="modal-body">
+    <div *ngIf="submitError != ''" class="alert alert-danger">
+      {{ submitError }}
+    </div>
+    <div class="form-group">
+      <label for="email">Date (yyyy-MM-dd)</label>
+      <input
+        type="text"
+        id="salesDate"
+        name="salesDate"
+        [(ngModel)]="salesData.salesDate"
+        #salesDate="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+    <div class="form-group">
+      <label for="customer">Customer</label>
+      <input
+        type="text"
+        id="customer"
+        name="customer"
+        [(ngModel)]="salesData.customer"
+        #customer="ngModel"
+        required
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="firstName">Item</label>
+      <input
+        type="text"
+        id="item"
+        name="item"
+        [ngModel]="salesData.item"
+        #item="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+    <div class="form-inline">
+      <label for="qty">Qty.:&nbsp;</label>
+      <input
+        type="text"
+        id="qty"
+        name="qty"
+        [(ngModel)]="salesData.qty"
+        #qty="ngModel"
+        required
+        class="form-control input-sm"
+        numberOnly
+      />
+      <label for="Rate">&nbsp;Rate:&nbsp;</label>
+      <input
+        type="text"
+        id="rate"
+        name="rate"
+        [(ngModel)]="salesData.rate"
+        #rate="ngModel"
+        class="form-control input-sm"
+        numberOnly
+      />
+      <label>&nbsp;Gross Amt.:&nbsp;</label>
+      <label>&nbsp;{{ rate.value * qty.value }}&nbsp;</label>
+    </div>
+    &nbsp;
+    <div class="form-inline">
+      <label for="taxPercent">Tax:&nbsp;</label>
+      <input
+        type="text"
+        id="taxPercent"
+        name="taxPercent"
+        [(ngModel)]="salesData.taxPercent"
+        #taxPercent="ngModel"
+        class="form-control input-sm"
+        numberOnly
+      />
+      <label>&nbsp;Net Amt.:&nbsp;</label>
+      <label
+        >&nbsp;{{
+          rate.value * qty.value +
+            (rate.value * qty.value * taxPercent.value) / 100
+        }}&nbsp;</label
+      >
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary" (click)="closeForm()">
+      Close
+    </button>
+  </div>
+</form>

@@ -28,6 +28,14 @@ export class ApiService {
     });
   }
 
+  delete(url: string) {
+    let headers = new HttpHeaders({ "Content-Type": "application/json" });
+    return this.httpClient.delete(this.urlRoot + url, {
+      headers: headers,
+      reportProgress: true
+    });
+  }
+
   uploadFile(url: string, data: any) {
     return this.httpClient.post(this.urlRoot + url, data, {
       observe: "events",

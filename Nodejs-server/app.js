@@ -25,6 +25,7 @@ if (config.applicationDatabase == "MYSQL") {
 //Load Router
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
+const salesRoute = require("./routes/sales");
 
 app.use(morgan("dev"));
 
@@ -52,6 +53,7 @@ app.use(helmet());
 //Provider router
 app.use("/restapi/user", userRoute);
 app.use("/restapi/auth", authRoute);
+app.use("/restapi/sales", salesRoute);
 
 app.use((req, res, next) => {
   const error = new Error("Not Found");

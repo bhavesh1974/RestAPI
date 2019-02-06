@@ -46,3 +46,145 @@
 [05-02-2019 06:18:02:115 PM] - [INFO] - connected as id 78
 [05-02-2019 06:23:50:561 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 06:23:50:559 PM
 [05-02-2019 06:23:50:571 PM] - [INFO] - connected as id 79
+[05-02-2019 10:37:48:603 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:37:48:602 PM
+[05-02-2019 10:37:48:613 PM] - [INFO] - connected as id 80
+[05-02-2019 10:39:11:337 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:39:11:335 PM
+[05-02-2019 10:39:11:355 PM] - [INFO] - connected as id 81
+[05-02-2019 10:40:19:158 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:40:19:154 PM
+[05-02-2019 10:40:19:174 PM] - [INFO] - connected as id 82
+[05-02-2019 10:42:20:537 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:42:20:535 PM
+[05-02-2019 10:42:20:545 PM] - [INFO] - connected as id 83
+[05-02-2019 10:42:56:921 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:42:56:918 PM
+[05-02-2019 10:42:56:939 PM] - [INFO] - connected as id 84
+[05-02-2019 10:44:23:491 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:44:23:488 PM
+[05-02-2019 10:44:23:506 PM] - [INFO] - connected as id 85
+[05-02-2019 10:45:10:371 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:45:10:369 PM
+[05-02-2019 10:45:10:386 PM] - [INFO] - connected as id 86
+[05-02-2019 10:46:38:918 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:46:38:916 PM
+[05-02-2019 10:46:38:926 PM] - [INFO] - connected as id 87
+[05-02-2019 10:46:59:625 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:46:59:621 PM
+[05-02-2019 10:46:59:643 PM] - [INFO] - connected as id 88
+[05-02-2019 10:47:05:320 PM] - [INFO] - App Crashed!  Cannot set property '0' of undefined
+[05-02-2019 10:47:05:321 PM] - [ERROR] - stack  TypeError: Cannot set property '0' of undefined
+    at Query.db.query (C:\Workspace\RestAPI\Nodejs-server\models\mysql\sales.js:38:29)
+    at Query.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:502:10)
+    at Query._callback (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:468:16)
+    at Query.Sequence.end (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:139:8)
+    at Query.EofPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:123:8)
+    at Protocol._parsePacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:91:28)
+[05-02-2019 10:47:05:335 PM] - [INFO] - Mail service is disabled.
+[05-02-2019 10:47:31:443 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:47:31:440 PM
+[05-02-2019 10:47:31:461 PM] - [INFO] - connected as id 89
+[05-02-2019 10:47:32:622 PM] - [INFO] - App Crashed!  Cannot set property '0' of undefined
+[05-02-2019 10:47:32:623 PM] - [ERROR] - stack  TypeError: Cannot set property '0' of undefined
+    at Query.db.query (C:\Workspace\RestAPI\Nodejs-server\models\mysql\sales.js:39:29)
+    at Query.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:502:10)
+    at Query._callback (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:468:16)
+    at Query.Sequence.end (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:139:8)
+    at Query.EofPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:123:8)
+    at Protocol._parsePacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:91:28)
+[05-02-2019 10:47:32:636 PM] - [INFO] - Mail service is disabled.
+[05-02-2019 10:48:16:474 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:48:16:471 PM
+[05-02-2019 10:48:16:491 PM] - [INFO] - connected as id 90
+[05-02-2019 10:48:45:661 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:48:45:658 PM
+[05-02-2019 10:48:45:677 PM] - [INFO] - connected as id 91
+[05-02-2019 10:49:06:473 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:49:06:469 PM
+[05-02-2019 10:49:06:491 PM] - [INFO] - connected as id 92
+[05-02-2019 10:49:19:350 PM] - [INFO] - App Crashed!  Cannot read property 'length' of undefined
+[05-02-2019 10:49:19:352 PM] - [ERROR] - stack  TypeError: Cannot read property 'length' of undefined
+    at Query.db.query (C:\Workspace\RestAPI\Nodejs-server\models\mysql\sales.js:42:23)
+    at Query.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:502:10)
+    at Query._callback (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:468:16)
+    at Query.Sequence.end (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:139:8)
+    at Query.EofPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:123:8)
+    at Protocol._parsePacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:91:28)
+[05-02-2019 10:49:19:368 PM] - [INFO] - Mail service is disabled.
+[05-02-2019 10:49:49:613 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:49:49:610 PM
+[05-02-2019 10:49:49:629 PM] - [INFO] - connected as id 93
+[05-02-2019 10:50:14:590 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:50:14:586 PM
+[05-02-2019 10:50:14:605 PM] - [INFO] - connected as id 94
+[05-02-2019 10:50:14:912 PM] - [INFO] - App Crashed!  Cannot set property '0' of undefined
+[05-02-2019 10:50:14:913 PM] - [ERROR] - stack  TypeError: Cannot set property '0' of undefined
+    at Query.db.query (C:\Workspace\RestAPI\Nodejs-server\models\mysql\sales.js:31:29)
+    at Query.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:502:10)
+    at Query._callback (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:468:16)
+    at Query.Sequence.end (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:139:8)
+    at Query.EofPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:123:8)
+    at Protocol._parsePacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:91:28)
+[05-02-2019 10:50:14:925 PM] - [INFO] - Mail service is disabled.
+[05-02-2019 10:50:32:502 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:50:32:498 PM
+[05-02-2019 10:50:32:521 PM] - [INFO] - connected as id 95
+[05-02-2019 10:50:33:627 PM] - [INFO] - App Crashed!  Cannot set property '0' of undefined
+[05-02-2019 10:50:33:631 PM] - [ERROR] - stack  TypeError: Cannot set property '0' of undefined
+    at Query.db.query (C:\Workspace\RestAPI\Nodejs-server\models\mysql\sales.js:32:29)
+    at Query.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:502:10)
+    at Query._callback (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:468:16)
+    at Query.Sequence.end (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:139:8)
+    at Query.EofPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:123:8)
+    at Protocol._parsePacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:91:28)
+[05-02-2019 10:50:33:645 PM] - [INFO] - Mail service is disabled.
+[05-02-2019 10:51:31:285 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 10:51:31:283 PM
+[05-02-2019 10:51:31:302 PM] - [INFO] - connected as id 96
+[05-02-2019 10:51:34:544 PM] - [INFO] - App Crashed!  Cannot set property '0' of undefined
+[05-02-2019 10:51:34:548 PM] - [ERROR] - stack  TypeError: Cannot set property '0' of undefined
+    at Query.db.query (C:\Workspace\RestAPI\Nodejs-server\models\mysql\sales.js:33:29)
+    at Query.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:502:10)
+    at Query._callback (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:468:16)
+    at Query.Sequence.end (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Sequence.js:83:24)
+    at Query._handleFinalResultPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:139:8)
+    at Query.EofPacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\sequences\Query.js:123:8)
+    at Protocol._parsePacket (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:278:23)
+    at Parser.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Workspace\RestAPI\Nodejs-server\node_modules\mysql\lib\Connection.js:91:28)
+[05-02-2019 10:51:34:559 PM] - [INFO] - Mail service is disabled.
+[05-02-2019 11:04:41:848 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:04:41:846 PM
+[05-02-2019 11:04:41:856 PM] - [INFO] - connected as id 97
+[05-02-2019 11:06:30:112 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:06:30:107 PM
+[05-02-2019 11:06:30:164 PM] - [INFO] - connected as id 98
+[05-02-2019 11:07:14:178 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:07:14:176 PM
+[05-02-2019 11:07:14:189 PM] - [INFO] - connected as id 99
+[05-02-2019 11:07:50:282 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:07:50:279 PM
+[05-02-2019 11:07:50:296 PM] - [INFO] - connected as id 100
+[05-02-2019 11:08:08:264 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:08:08:260 PM
+[05-02-2019 11:08:08:283 PM] - [INFO] - connected as id 101
+[05-02-2019 11:08:21:852 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:08:21:848 PM
+[05-02-2019 11:08:21:874 PM] - [INFO] - connected as id 102
+[05-02-2019 11:09:54:633 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:09:54:631 PM
+[05-02-2019 11:09:54:644 PM] - [INFO] - connected as id 103
+[05-02-2019 11:10:05:688 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:10:05:685 PM
+[05-02-2019 11:10:05:704 PM] - [INFO] - connected as id 104
+[05-02-2019 11:11:50:768 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:11:50:765 PM
+[05-02-2019 11:11:50:785 PM] - [INFO] - connected as id 105
+[05-02-2019 11:12:23:237 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:12:23:235 PM
+[05-02-2019 11:12:23:250 PM] - [INFO] - connected as id 106
+[05-02-2019 11:12:39:484 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:12:39:474 PM
+[05-02-2019 11:12:39:505 PM] - [INFO] - connected as id 107
+[05-02-2019 11:12:48:213 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:12:48:209 PM
+[05-02-2019 11:12:48:224 PM] - [INFO] - connected as id 108
+[05-02-2019 11:14:05:811 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:14:05:808 PM
+[05-02-2019 11:14:05:824 PM] - [INFO] - connected as id 109
+[05-02-2019 11:14:27:887 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:14:27:883 PM
+[05-02-2019 11:14:27:905 PM] - [INFO] - connected as id 110
+[05-02-2019 11:14:58:179 PM] - [INFO] - -------- Starting Application --------   8080 05-02-2019 11:14:58:174 PM
+[05-02-2019 11:14:58:196 PM] - [INFO] - connected as id 111
