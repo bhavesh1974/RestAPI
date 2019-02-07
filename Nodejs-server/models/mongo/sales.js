@@ -17,7 +17,7 @@ module.exports = class Sales {
     if (!data) return null;
 
     const sales = new Sales(
-      data.id,
+      data._id,
       data.salesDate,
       data.customer,
       data.item,
@@ -53,7 +53,6 @@ module.exports = class Sales {
       });
     } else {
       var newSales = SalesSchema({
-        id: this.id,
         salesDate: this.salesDate,
         customer: this.customer,
         item: this.item,
