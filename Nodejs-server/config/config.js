@@ -37,5 +37,5 @@ module.exports = {
     apiUrl: process.env.videoIndexerApiURL
   },
 
-  applicationDatabase: "MYSQL"
+  applicationDatabase: "MONGO"
 };

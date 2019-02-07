@@ -1,4 +1,4 @@
-const Sales = require("../models/mysql/sales");
+const Sales = require("../models/sales");
 
 exports.getAll = async (req, res, next) => {
   sales = new Sales();
