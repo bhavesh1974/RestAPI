@@ -21,6 +21,9 @@ export class SalesListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loadSales();
+  }
+  loadSales() {
     this.salesService.getAll().subscribe(
       data => {
         this.sales = data;
@@ -89,6 +92,7 @@ export class SalesListComponent implements OnInit {
   submitForm(formData: any) {
     this.salesService.save(formData).subscribe(
       (data: any) => {
+        this.loadSales();
         alert(data.message);
       },
       error => {

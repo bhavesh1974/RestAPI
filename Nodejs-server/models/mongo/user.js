@@ -56,7 +56,7 @@ module.exports = class User {
       phone: this.phone,
       password: this.password,
       picture: "",
-      isVerified: 0,
+      isVerified: 1,
       isActive: 1,
       verificationToken: this.verificationToken
     });

@@ -63,7 +63,7 @@ module.exports = class User {
 
   save() {
     const sql =
-      "INSERT INTO users (id, firstName, lastName, email, password, phone, createdAt, verificationToken) VALUES (?,?,?,?,?,?,?,?)";
+      "INSERT INTO users (id, firstName, lastName, email, password, phone, createdAt, verificationToken, isVerified) VALUES (?,?,?,?,?,?,?,?,1)";
     const data = [
       this.id,
       this.firstName,
