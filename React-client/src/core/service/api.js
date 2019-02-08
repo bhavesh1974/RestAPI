@@ -10,6 +10,9 @@ const api = {
   get: (url, headers) => {
     return axios.get(url);
   },
+  delete: (url, headers) => {
+    return axios.delete(url);
+  },
   getImage: (url, headers) => {
     return axios.get(url, { headers: headers });
   }

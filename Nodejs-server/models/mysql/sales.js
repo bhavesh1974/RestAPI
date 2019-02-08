@@ -1,4 +1,5 @@
 const db = require("../../config/mysql");
+const util = require("../../services/util");
 
 module.exports = class Sales {
   constructor(id, salesDate, customer, item, qty, rate, taxPercent, remark) {
@@ -64,13 +65,13 @@ module.exports = class Sales {
 
   save() {
     let sql = "";
-
     if (this.id != undefined && this.id != "") {
       sql =
         "UPDATE sales SET salesDate = ?, customer = ?, item = ?, qty = ?, rate = ?, taxPercent = ?, remark = ? where id = ?";
     } else {
+      this.id = util.generateId();
       sql =
-        "INSERT INTO sales (salesDate, customer, item, qty, rate, taxPercent, remark) VALUES (?,?,?,?,?,?,?)";
+        "INSERT INTO sales (salesDate, customer, item, qty, rate, taxPercent, remark,id) VALUES (?,?,?,?,?,?,?,?)";
     }
     const data = [
       this.salesDate,

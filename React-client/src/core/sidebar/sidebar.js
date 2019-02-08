@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 class SideBar extends React.Component {
   render() {
@@ -15,12 +15,12 @@ class SideBar extends React.Component {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/sales/list">
               <i className="fa fa-list" aria-hidden="true">
                 {" "}
               </i>{" "}
               List
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">

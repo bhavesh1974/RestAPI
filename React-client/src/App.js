@@ -8,6 +8,7 @@ import Header from "./core/header/header";
 import UpdateProfile from "./user/updateprofile/updateprofile";
 import UploadPicture from "./user/uploadpicture/uploadpicture";
 import ChangePassword from "./user/changepassword/changepassword";
+import SalesList from "./sales/list/list";
 
 class App extends Component {
   componentDidMount() {
@@ -19,7 +20,11 @@ class App extends Component {
         <Header />
         <div
           className="container"
-          style={{ marginTop: "60px", marginLeft: "150px" }}
+          style={{
+            marginTop: "60px",
+            marginLeft: "160px",
+            width: "85%"
+          }}
         >
           <Switch>
             <Route path="/signup" component={SignUp} />
@@ -27,6 +32,7 @@ class App extends Component {
             <Route path="/updateprofile" component={UpdateProfile} />
             <Route path="/uploadpicture" component={UploadPicture} />
             <Route path="/changepassword" component={ChangePassword} />
+            <Route path="/sales/list" component={SalesList} />
             <Route path="/" exact component={Home} />
           </Switch>
         </div>

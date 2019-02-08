@@ -44,21 +44,6 @@ class UpdateProfile extends React.Component {
     });
   }
 
-  createImageFromBlob(image) {
-    let reader = new FileReader();
-    reader.addEventListener(
-      "load",
-      () => {
-        this.setState({ source: reader.result });
-      },
-      false
-    );
-
-    if (image) {
-      reader.readAsDataURL(image);
-    }
-  }
-
   handleChange = event => {
     this.setState({ form: handleChange(event, this.state.form) });
   };
