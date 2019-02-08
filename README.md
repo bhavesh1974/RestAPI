@@ -6,6 +6,8 @@ It includes Backend (RESTAPI) developed in Node.js and Java/Spring. You can use 
 Angular:
 Component, Direct, Service, Router, ngx-spinner, ng-flash-message, ngx-bootstrap, font-awesome, file upload
 
+AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazonaws.com/
+
 React
 Component, Stateless Component, Redux, Axios, Router, Bootstrap, font-awesom, file upload
 
