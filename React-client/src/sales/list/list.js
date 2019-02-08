@@ -7,7 +7,16 @@ class SalesList extends React.Component {
   state = {
     sales: [],
     filterSales: [],
-    modalShow: false
+    modalShow: false,
+    editRecord: {
+      id: "",
+      salesDate: "",
+      customer: "",
+      item: "",
+      qty: 0,
+      rate: 0,
+      taxPercent: 0
+    }
   };
 
   componentDidMount() {
@@ -33,10 +42,34 @@ class SalesList extends React.Component {
   };
 
   addForm = () => {
-    this.setState({ modalShow: true });
+    this.setState(
+      {
+        editRecord: {
+          id: "",
+          salesDate: "",
+          customer: "",
+          item: "",
+          qty: 0,
+          rate: 0,
+          taxPercent: 0
+        }
+      },
+      function() {
+        this.setState({ modalShow: true });
+      }
+    );
   };
 
+  editForm(record) {
+    this.setState({ editRecord: record }, function() {
+      this.setState({ modalShow: true });
+    });
+  }
+
   delete(id) {
+    if (window.confirm("Are you sure you want to delete?") == false) {
+      return;
+    }
     api.delete("/sales/delete/" + id).then(
       response => {
         alert(response.data.message);
@@ -64,7 +97,7 @@ class SalesList extends React.Component {
           {this.calculateNetAmount(record.qty * record.rate, record.taxPercent)}
         </td>
         <td className="text-center">
-          <a>
+          <a onClick={() => this.editForm(record)}>
             <i className="fa fa-pencil" />
           </a>
           &nbsp;
@@ -124,7 +157,11 @@ class SalesList extends React.Component {
             </div>
           </div>
         </div>
-        <SalesForm show={this.state.modalShow} onHide={this.closeForm} />
+        <SalesForm
+          show={this.state.modalShow}
+          onHide={this.closeForm}
+          editRecord={this.state.editRecord}
+        />
       </div>
     );
   }

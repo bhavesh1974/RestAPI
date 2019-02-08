@@ -8,6 +8,10 @@ import api from "../../core/service/api";
 class SalesForm extends React.Component {
   state = {
     form: {
+      id: {
+        value: "",
+        label: "Id"
+      },
       salesDate: {
         value: "",
         validation: { required: true },
@@ -51,6 +55,20 @@ class SalesForm extends React.Component {
     submitError: "",
     submitSuccess: ""
   };
+
+  componentWillReceiveProps(oldProps, newProps) {
+    if (this.props != undefined) {
+      let updatedForm = { ...this.state.form };
+      updatedForm.customer.value = this.props.editRecord.customer;
+      updatedForm.item.value = this.props.editRecord.item;
+      updatedForm.qty.value = this.props.editRecord.qty;
+      updatedForm.rate.value = this.props.editRecord.rate;
+      updatedForm.taxPercent.value = this.props.editRecord.taxPercent;
+      updatedForm.salesDate.value = this.props.editRecord.salesDate;
+      updatedForm.id.value = this.props.editRecord.id;
+      this.setState({ form: updatedForm });
+    }
+  }
 
   calculateAmount() {
     return (
