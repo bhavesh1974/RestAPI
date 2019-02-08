@@ -14,6 +14,8 @@ Component, Stateless Component, Redux, Axios, Router, Bootstrap, font-awesom, fi
 Node.js
 Express, Router, multer, Mongoose, MySql, morgan, jsonwebtoken, nodemailer, swagger, chai (for unit testing), file upload
 
+AWS EC2 Hosted: http://ec2-54-149-157-79.us-west-2.compute.amazonaws.com:8080/restapi/ (connecting to MongoDB)
+
 Java
 Spring, Swagger, Jackson, log4j, Mongo, MySql, JWT, Bootstrap, file upload
 
