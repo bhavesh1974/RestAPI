@@ -73,12 +73,22 @@ class SalesList extends React.Component {
     api.delete("/sales/delete/" + id).then(
       response => {
         alert(response.data.message);
+        this.loadSales();
       },
       error => {
         alert(error.error.message);
       }
     );
   }
+
+  filterList = event => {
+    const filter = this.state.sales.filter(
+      item =>
+        item.customer.toLowerCase().indexOf(event.target.value.toLowerCase()) ==
+        0
+    );
+    this.setState({ filterSales: filter });
+  };
 
   renderRecord() {
     return this.state.filterSales.map((record, key) => (
@@ -113,6 +123,12 @@ class SalesList extends React.Component {
     return (
       <div className="row">
         <div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Customer"
+            onChange={this.filterList}
+          />
           <div className="panel panel-default panel-table">
             <div className="panel-heading">
               <div className="row">
@@ -120,7 +136,7 @@ class SalesList extends React.Component {
                   <h3 className="panel-title">Sales</h3>
                 </div>
                 <div className="col col-xs-6 text-right">
-                  <Button variant="primary" onClick={this.addForm}>
+                  <Button className="btn-primary" onClick={this.addForm}>
                     Add Sales
                   </Button>
                 </div>
