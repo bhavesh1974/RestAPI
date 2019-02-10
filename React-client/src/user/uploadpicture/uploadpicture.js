@@ -1,5 +1,5 @@
 import React from "react";
-import api from "../../core/service/api";
+import api from "../../shared/service/api";
 
 class UploadPicture extends React.Component {
   state = { selectedFile: null };

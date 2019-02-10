@@ -1,8 +1,8 @@
 import React from "react";
-import FormControlError from "../../core/forms/formcontrollerror";
-import handleChange from "../../core/forms/handlechange";
-import handleSubmit from "../../core/forms/handleSubmit";
-import api from "../../core/service/api";
+import FormControlError from "../../shared/forms/formcontrollerror";
+import handleChange from "../../shared/forms/handlechange";
+import handleSubmit from "../../shared/forms/handleSubmit";
+import api from "../../shared/service/api";
 import { connect } from "react-redux";
 
 class SignIn extends React.Component {

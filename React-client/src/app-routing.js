@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Route, Switch, Redirect, Link, Router } from "react-router-dom";
 import SignIn from "./auth/signin/signin";
 import SignUp from "./auth/signup/signup";
-import Home from "./core/home/home";
-import Header from "./core/header/header";
+import Home from "./shared/home/home";
+import Header from "./shared/header/header";
 
 class Routing extends React.Component {
   render() {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
-import FormControlError from "../../core/forms/formcontrollerror";
-import handleChange from "../../core/forms/handlechange";
-import handleSubmit from "../../core/forms/handleSubmit";
-import api from "../../core/service/api";
+import FormControlError from "../../shared/forms/formcontrollerror";
+import handleChange from "../../shared/forms/handlechange";
+import handleSubmit from "../../shared/forms/handleSubmit";
+import api from "../../shared/service/api";
 
 class SalesForm extends React.Component {
   state = {
