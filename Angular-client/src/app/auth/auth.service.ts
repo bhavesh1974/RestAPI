@@ -1,6 +1,6 @@
 import { Router } from "@angular/router";
 import { Injectable, OnInit } from "@angular/core";
-import { ApiService } from "../core/services/api.service";
+import { ApiService } from "../shared/services/api.service";
 
 @Injectable()
 export class AuthService {

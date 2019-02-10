@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from "@angular/router";
 import { SalesListComponent } from "./list/sales-list.component";
-import { AuthGuard } from "../core/services/auth-guard.service";
+import { AuthGuard } from "../shared/services/auth-guard.service";
 import { NgModule } from "@angular/core";
 import { SalesFormComponent } from "./form/form.component";
 

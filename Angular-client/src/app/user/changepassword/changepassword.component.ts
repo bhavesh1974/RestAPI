@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "../user.service";
 import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
-import { FlashService } from "src/app/core/services/flash.service";
+import { FlashService } from "src/app/shared/services/flash.service";
 
 @Component({
   selector: "app-changepassword",

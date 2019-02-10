@@ -5,7 +5,7 @@ import { SigninComponent } from "./signin/signin.component";
 import { AuthRoutingModule } from "./auth-routing.module";
 import { AuthService } from "./auth.service";
 import { BrowserModule } from "@angular/platform-browser";
-import { CoreModule } from "../core/core.module";
+import { CoreModule } from "../shared/shared.module";
 
 @NgModule({
   declarations: [SigninComponent],

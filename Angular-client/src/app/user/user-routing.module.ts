@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { UpdateprofileComponent } from "./updateprofile/updateprofile.component";
 import { UploadpictureComponent } from "./uploadpicture/uploadpicture.component";
 import { ChangepasswordComponent } from "./changepassword/changepassword.component";
-import { AuthGuard } from "../core/services/auth-guard.service";
+import { AuthGuard } from "../shared/services/auth-guard.service";
 import { SignupComponent } from "./signup/signup.component";
 
 const userRoutes: Routes = [

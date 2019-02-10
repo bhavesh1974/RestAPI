@@ -4,7 +4,7 @@ import { NgForm } from "@angular/forms";
 import { AuthService } from "../auth.service";
 import { Router } from "@angular/router";
 import { NgxSpinnerService } from "ngx-spinner";
-import { ApiService } from "src/app/core/services/api.service";
+import { ApiService } from "src/app/shared/services/api.service";
 
 @Component({
   selector: "app-signin",

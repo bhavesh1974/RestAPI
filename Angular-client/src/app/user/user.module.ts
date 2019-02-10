@@ -5,7 +5,7 @@ import { UpdateprofileComponent } from "./updateprofile/updateprofile.component"
 import { UploadpictureComponent } from "./uploadpicture/uploadpicture.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
-import { CoreModule } from "../core/core.module";
+import { CoreModule } from "../shared/shared.module";
 import { UserService } from "./user.service";
 import { UserRoutingModule } from "./user-routing.module";
 import { SignupComponent } from "./signup/signup.component";
