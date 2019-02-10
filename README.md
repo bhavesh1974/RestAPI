@@ -11,6 +11,8 @@ AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazo
 React
 Component, Stateless Component, Redux, Axios, Router, Bootstrap, font-awesom, file upload
 
+AWS S3 Hosted: http://com.bhaveshshah.react-client.s3-website-us-west-2.amazonaws.com
+
 Node.js
 Express, Router, multer, Mongoose, MySql, morgan, jsonwebtoken, nodemailer, swagger, chai (for unit testing), file upload
 
