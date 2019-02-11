@@ -6,17 +6,17 @@ It includes Backends (RESTAPI) developed in Node.js and Java/Spring. You can use
 Angular:
 Component, Direct, Service, Router, ngx-spinner, ng-flash-message, ngx-bootstrap, font-awesome, file upload
 
-AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazonaws.com/
+  >> AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazonaws.com/
 
 React
 Component, Stateless Component, Redux, Axios, Router, Bootstrap, font-awesom, file upload
 
-AWS S3 Hosted: http://com.bhaveshshah.react-client.s3-website-us-west-2.amazonaws.com
+  >> AWS S3 Hosted: http://com.bhaveshshah.react-client.s3-website-us-west-2.amazonaws.com
 
 Node.js
 Express, Router, multer, Mongoose, MySql, morgan, jsonwebtoken, nodemailer, swagger, chai (for unit testing), file upload
 
-AWS EC2 Hosted: http://ec2-54-149-157-79.us-west-2.compute.amazonaws.com:8080/restapi/ (connected to MongoDB)
+  >> AWS EC2 Hosted: http://ec2-54-149-157-79.us-west-2.compute.amazonaws.com:8080/restapi/ (connected to MongoDB)
 
 Java
 Spring, Swagger, Jackson, log4j, Mongo, MySql, JWT, Bootstrap, file upload
