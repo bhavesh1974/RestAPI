@@ -19,14 +19,18 @@ public class SalesDaoImpl extends BaseDaoImpl implements SalesDao, InitializingB
 	SalesDaoImplMySql salesDaoMySql;
 	@Autowired
 	SalesDaoImplMongo salesDaoMongo;
+	@Autowired
+	@Qualifier("SalesDaoImplHibernate") SalesDao salesDaoHibernate;
 	
 	SalesDao salesDao;
 	
 	public void afterPropertiesSet() throws Exception {
 		if (this.getApplicationDatabase().equals("MYSQL")) {
 			salesDao = salesDaoMySql;
-		} else {
+		} else if (this.getApplicationDatabase().equals("MONGO")) {
 			salesDao = salesDaoMongo;
+		} else {
+			salesDao = salesDaoHibernate;
 		}
 	}
 

@@ -24,7 +24,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter  {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
         throws Exception {
 		if( !request.getRequestURI().equals("/restapi/auth/signin") && 
-			!request.getRequestURI().equals("/restapi/auth/signup") &&
+			!request.getRequestURI().equals("/restapi/user/signup") &&
 			!request.getRequestURI().contains("/restapi/auth/confirmation") &&
 			!request.getRequestURI().toLowerCase().contains("swagger") &&
 			!request.getRequestURI().toLowerCase().contains("api-docs") &&

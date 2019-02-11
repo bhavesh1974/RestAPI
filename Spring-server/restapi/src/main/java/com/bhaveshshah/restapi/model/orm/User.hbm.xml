@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 11, 2019 4:49:13 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.bhaveshshah.restapi.model.User" table="USERS" lazy="false">
+     	<id name="id" type="java.lang.String">
+            <column name="ID" />
+        </id>    
+        <property name="firstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="isVerified" type="java.lang.Integer">
+            <column name="ISVERIFIED" />
+        </property>
+        <property name="verificationToken" type="java.lang.String">
+            <column name="VERIFICATIONTOKEN" />
+        </property>
+        <property name="isActive" type="java.lang.Integer">
+            <column name="ISACTIVE" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="picture" type="java.lang.String">
+            <column name="PICTURE" />
+        </property>
+    </class>
+</hibernate-mapping>

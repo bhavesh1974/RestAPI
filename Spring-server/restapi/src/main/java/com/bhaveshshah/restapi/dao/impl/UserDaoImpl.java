@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import com.bhaveshshah.restapi.dao.UserDao;
+import com.bhaveshshah.restapi.dao.impl.hibernate.UserDaoImplHibernate;
 import com.bhaveshshah.restapi.dao.impl.mongo.UserDaoImplMongo;
 import com.bhaveshshah.restapi.dao.impl.mysql.UserDaoImplMySql;
 import com.bhaveshshah.restapi.model.User;
@@ -18,6 +19,9 @@ public class UserDaoImpl extends BaseDaoImpl implements UserDao, InitializingBea
 	UserDaoImplMySql userDaoMysql;
 	@Autowired
 	UserDaoImplMongo userDaoMongo;
+	@Autowired
+	@Qualifier("UserDaoImplHibernate") UserDao userDaoHibernate;
+	
 	private UserDao userDao;
 	
 	@Override
@@ -74,8 +78,10 @@ public class UserDaoImpl extends BaseDaoImpl implements UserDao, InitializingBea
 	public void afterPropertiesSet() throws Exception {
 		if (this.getApplicationDatabase().equals("MYSQL")) {
 			userDao = this.userDaoMysql;
-		} else {
+		} else if (this.getApplicationDatabase().equals("MONGO")) {
 			userDao = this.userDaoMongo;
+		} else {
+			userDao = this.userDaoHibernate;
 		}
 	}
 }

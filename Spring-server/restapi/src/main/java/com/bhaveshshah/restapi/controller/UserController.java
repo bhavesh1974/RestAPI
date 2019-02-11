@@ -50,6 +50,11 @@ public class UserController extends BaseController implements InitializingBean {
 			return new ResponseEntity<>(new Response("4221","Please provide valid values."), HttpStatus.NOT_ACCEPTABLE);
 		}
 		
+		User userExisting = userDao.findByEmail(user.getEmail());
+		if (userExisting != null) {
+			return new ResponseEntity<>(new Response("4221","User already exists with this email."), HttpStatus.NOT_ACCEPTABLE);
+		}
+		
 		//Generate and set new ID
 		user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt(12)));
 		user.setVerificationToken(ApplicationUtil.generateToken(32));

@@ -1,8 +1,6 @@
 import { Component, OnInit, TemplateRef } from "@angular/core";
 import { SalesService } from "../sales.service";
 import { BsModalService, BsModalRef } from "ngx-bootstrap/modal";
-import { NgForm } from "@angular/forms";
-import { SalesFormComponent } from "../form/form.component";
 
 @Component({
   selector: "app-sales-list",
