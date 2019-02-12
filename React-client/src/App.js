@@ -14,6 +14,7 @@ class App extends Component {
   componentDidMount() {
     document.title = "React-Client";
   }
+
   render() {
     return (
       <div>

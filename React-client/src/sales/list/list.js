@@ -1,7 +1,15 @@
 import React from "react";
 import api from "../../shared/service/api";
-import SalesForm from "../form/form";
 import { Button } from "react-bootstrap";
+import Loadable from "react-loadable";
+import { connect } from "react-redux";
+
+const LoadableComponent = Loadable({
+  loader: () => import("../form/form"),
+  loading() {
+    return <div>Loading...</div>;
+  }
+});
 
 class SalesList extends React.Component {
   state = {
@@ -20,6 +28,9 @@ class SalesList extends React.Component {
   };
 
   componentDidMount() {
+    if (this.props.isAuthenticated === false) {
+      this.props.history.replace("/");
+    }
     this.loadSales();
   }
 
@@ -67,7 +78,7 @@ class SalesList extends React.Component {
   }
 
   delete(id) {
-    if (window.confirm("Are you sure you want to delete?") == false) {
+    if (window.confirm("Are you sure you want to delete?") === false) {
       return;
     }
     api.delete("/sales/delete/" + id).then(
@@ -84,8 +95,9 @@ class SalesList extends React.Component {
   filterList = event => {
     const filter = this.state.sales.filter(
       item =>
-        item.customer.toLowerCase().indexOf(event.target.value.toLowerCase()) ==
-        0
+        item.customer
+          .toLowerCase()
+          .indexOf(event.target.value.toLowerCase()) === 0
     );
     this.setState({ filterSales: filter });
   };
@@ -125,7 +137,7 @@ class SalesList extends React.Component {
         <div>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             placeholder="Search Customer"
             onChange={this.filterList}
           />
@@ -173,7 +185,7 @@ class SalesList extends React.Component {
             </div>
           </div>
         </div>
-        <SalesForm
+        <LoadableComponent
           show={this.state.modalShow}
           onHide={this.closeForm}
           editRecord={this.state.editRecord}
@@ -183,4 +195,8 @@ class SalesList extends React.Component {
   }
 }
 
-export default SalesList;
+const mapStateToProps = state => {
+  return { isAuthenticated: state.isAuthenticated };
+};
+
+export default connect(mapStateToProps)(SalesList);

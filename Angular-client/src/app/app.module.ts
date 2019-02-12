@@ -17,7 +17,6 @@ import { AuthGuard } from "./shared/services/auth-guard.service";
 import { NgFlashMessagesModule } from "ng-flash-messages";
 import { FlashService } from "./shared/services/flash.service";
 import { SidebarComponent } from "./shared/panels/sidebar/sidebar.component";
-import { SalesModule } from "./sales/sales.module";
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { SalesModule } from "./sales/sales.module";
     FormsModule,
     UserModule,
     AuthModule,
-    SalesModule,
     AppBootstrapModule,
     NgxSpinnerModule,
     NgFlashMessagesModule.forRoot()

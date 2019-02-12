@@ -6,7 +6,7 @@ import { SalesFormComponent } from "./form/form.component";
 
 const salesRoutes: Routes = [
   {
-    path: "sales/list",
+    path: "",
     component: SalesListComponent,
     canActivate: [AuthGuard]
   },

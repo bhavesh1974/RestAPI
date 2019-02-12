@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: "",
     component: HomeComponent
+  },
+  {
+    path: "sales",
+    loadChildren: "./sales/sales.module#SalesModule"
   }
 ];
 
