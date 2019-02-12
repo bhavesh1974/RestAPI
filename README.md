@@ -4,12 +4,12 @@ It includes Backends (RESTAPI) developed in Node.js and Java/Spring. You can use
      You need to set property to configure database in the config/config.js (Node.js) or WEB-INF/application.properties. 
      
 Angular:
-Component, Direct, Service, Router, ngx-spinner, ng-flash-message, ngx-bootstrap, font-awesome, file upload
+Component, Direct, Service, Router, ngx-spinner, ng-flash-message, ngx-bootstrap, font-awesome, file upload, lazy loading
 
   >> AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazonaws.com/
 
 React
-Component, Stateless Component, Redux, Axios, Router, Bootstrap, font-awesom, file upload
+Component, Stateless Component, Redux, Axios, Router, Bootstrap, font-awesome, file upload, lazy loading
 
   >> AWS S3 Hosted: http://com.bhaveshshah.react-client.s3-website-us-west-2.amazonaws.com
 
