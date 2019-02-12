@@ -10,13 +10,7 @@ import { SalesFormComponent } from "./form/form.component";
 
 @NgModule({
   declarations: [SalesListComponent, SalesFormComponent],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    SalesRoutingModule,
-    CoreModule
-  ],
+  imports: [CommonModule, FormsModule, SalesRoutingModule, CoreModule],
   providers: [SalesService]
 })
 export class SalesModule {}

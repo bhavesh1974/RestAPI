@@ -33,10 +33,10 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter  {
 			String authorization = "";
 			authorization = request.getHeader("Authorization");
 			if (authorization == null) {
-				throw new UnAuthorizedException("Teting");
+				throw new UnAuthorizedException("Provide authorization token.");
 			}
 			if (authorization.length() < 7) {
-				throw new UnAuthorizedException("Teting");
+				throw new UnAuthorizedException("Invalid Token.");
 			}
 			String token = authorization.substring(7);
 			Jws<Claims> claims = null;
