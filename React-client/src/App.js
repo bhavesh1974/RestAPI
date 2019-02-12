@@ -8,7 +8,10 @@ import Header from "./shared/header/header";
 import UpdateProfile from "./user/updateprofile/updateprofile";
 import UploadPicture from "./user/uploadpicture/uploadpicture";
 import ChangePassword from "./user/changepassword/changepassword";
-import SalesList from "./sales/list/list";
+import lazyLoadComponent from "./shared/hoc/lazyLoadComponent";
+import NotFound from "./notfound";
+
+const lazyLoadSalesList = lazyLoadComponent(() => import("./sales/list/list"));
 
 class App extends Component {
   componentDidMount() {
@@ -33,8 +36,9 @@ class App extends Component {
             <Route path="/updateprofile" component={UpdateProfile} />
             <Route path="/uploadpicture" component={UploadPicture} />
             <Route path="/changepassword" component={ChangePassword} />
-            <Route path="/sales/list" component={SalesList} />
+            <Route path="/sales/list" component={lazyLoadSalesList} />
             <Route path="/" exact component={Home} />
+            <Route component={NotFound} />
           </Switch>
         </div>
       </div>

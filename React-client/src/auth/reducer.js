@@ -42,7 +42,6 @@ const reducer = (state = initialState, action) => {
       userName: action.userName
     };
   }
-  console.log(state.isAuthenticated);
   return state;
 };
 
