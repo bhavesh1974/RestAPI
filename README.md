@@ -22,6 +22,6 @@ Java
 Spring, Swagger, Jackson, log4j, Mongo, MySql, JWT, Bootstrap, file upload
 
 
-It is just initial code to start project on any of above technologies. There is a LOT to improve in the code and I leave up to you to do your best for this. It is just to display different way of coding for different things. ** Please note that it is not about fancy UI. It is about how things can be done in Angular, React, Node.js or Java/Spring. **
+It is not clean or perfect code. There is a LOT to improve in the code and I leave up to you to do your best for this. It is just to display different way of coding for different things. ** Please note that it is not about fancy UI. It is about how things can be done in Angular, React, Node.js or Java/Spring. **
 
 MORE COMING UP...HANG IN THERE...:)
