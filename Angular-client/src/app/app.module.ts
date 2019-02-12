@@ -17,6 +17,7 @@ import { AuthGuard } from "./shared/services/auth-guard.service";
 import { NgFlashMessagesModule } from "ng-flash-messages";
 import { FlashService } from "./shared/services/flash.service";
 import { SidebarComponent } from "./shared/panels/sidebar/sidebar.component";
+import { NotfoundComponent } from "./notfound/notfound.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SidebarComponent } from "./shared/panels/sidebar/sidebar.component";
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
