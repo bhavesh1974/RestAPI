@@ -8,7 +8,6 @@ import { FooterComponent } from "./shared/panels/footer/footer.component";
 import { HomeComponent } from "./shared/home/home.component";
 import { ApiService } from "./shared/services/api.service";
 import { AuthModule } from "./auth/auth.module";
-import { AppRoutingModule } from "./app-routing.module";
 import { AppBootstrapModule } from "./appbootstrap.module";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ApiInterceptor } from "./shared/services/api.interceptor";
@@ -18,6 +17,7 @@ import { NgFlashMessagesModule } from "ng-flash-messages";
 import { FlashService } from "./shared/services/flash.service";
 import { SidebarComponent } from "./shared/panels/sidebar/sidebar.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -30,11 +30,11 @@ import { NotfoundComponent } from "./notfound/notfound.component";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     UserModule,
     AuthModule,
+    AppRoutingModule,
     AppBootstrapModule,
     NgxSpinnerModule,
     NgFlashMessagesModule.forRoot()
