@@ -14,11 +14,11 @@ class SocketSample extends Component {
 
   sendMessage = () => {
     socketService.initSocket();
-    socketService.send(this.state.message);
     socketService.onMessage().subscribe(data => {
       this.setState({ serverMessage: data });
       socketService.disconnectSocket();
     });
+    socketService.send(this.state.message);
   };
 
   render() {
