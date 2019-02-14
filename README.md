@@ -9,7 +9,7 @@ Angular:
   >> AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazonaws.com/
 
 React:
-**Component, Functional Stateless Component, Redux, Axios, Router, Bootstrap, Lazy Loading, File Upload**
+**Component, Functional Stateless Component, Redux, Axios, Router, Bootstrap, Lazy Loading, File Upload, Socket Connection**
 
   >> AWS S3 Hosted: http://com.bhaveshshah.react-client.s3-website-us-west-2.amazonaws.com
 
