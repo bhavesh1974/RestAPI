@@ -5,6 +5,7 @@ import { AuthService } from "../auth.service";
 import { Router } from "@angular/router";
 import { NgxSpinnerService } from "ngx-spinner";
 import { ApiService } from "src/app/shared/services/api.service";
+import { LogService } from "src/app/shared/services/log.service";
 
 @Component({
   selector: "app-signin",
@@ -17,13 +18,15 @@ export class SigninComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    private logService: LogService
   ) {}
 
   ngOnInit() {}
 
   onSignin(form: NgForm) {
     if (form.valid) {
+      this.logService.logDebugMessage("Calling API to verify email/password");
       this.spinner.show();
       this.authService.signinUser(form.value).subscribe(
         (data: any) => {

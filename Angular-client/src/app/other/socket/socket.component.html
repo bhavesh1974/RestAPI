@@ -1,0 +1,7 @@
+<p>
+  <label for="message">Message: </label
+  ><input id="message" type="text" [(ngModel)]="message" />&nbsp;
+  <Button (click)="sendMessge()" class="btn btn-primary">Send Message</Button>
+  <br />
+  Message received from server: {{ serverMessage }}
+</p>

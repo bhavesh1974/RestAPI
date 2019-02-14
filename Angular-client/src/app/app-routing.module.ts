@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./shared/home/home.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
+import { SocketComponent } from "./other/socket/socket.component";
 
 const routes: Routes = [
   {

@@ -18,6 +18,11 @@ import { FlashService } from "./shared/services/flash.service";
 import { SidebarComponent } from "./shared/panels/sidebar/sidebar.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { LogService, LogLevel } from "./shared/services/log.service";
+import { OtherModule } from "./other/other.module";
+
+let logger = new LogService();
+logger.minimumLevel = LogLevel.DEBUG;
 
 @NgModule({
   declarations: [
@@ -34,6 +39,7 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     UserModule,
     AuthModule,
+    OtherModule,
     AppRoutingModule,
     AppBootstrapModule,
     NgxSpinnerModule,
@@ -47,6 +53,10 @@ import { AppRoutingModule } from "./app-routing.module";
       provide: HTTP_INTERCEPTORS,
       useClass: ApiInterceptor,
       multi: true
+    },
+    {
+      provide: LogService,
+      useValue: logger
     }
   ],
   bootstrap: [AppComponent]

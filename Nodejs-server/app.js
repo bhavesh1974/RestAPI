@@ -88,8 +88,21 @@ process.on("uncaughtException", function(error) {
   mailer.sendEmail(data);
 });
 
-// createPortProxy(8080, config.server.port);
 server = http.createServer(app);
+
+const socketIO = require("socket.io")(server);
+socketIO.origins("*:*");
+socketIO.on("connection", function(socket) {
+  console.log(socket.id + " is connected.");
+  socket.on("disconnect", function() {
+    console.log(socket.id + " is disconnected.");
+  });
+  socket.on("eventFromClient", function(data) {
+    socketIO.emit("eventFromServer", "Acknowledge client message " + data);
+  });
+});
+
+// createPortProxy(8080, config.server.port);
 server.listen(config.server.port);
 logger.info(
   "-------- Starting Application --------  ",
