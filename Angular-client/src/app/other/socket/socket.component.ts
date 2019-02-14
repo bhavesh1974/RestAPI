@@ -15,10 +15,10 @@ export class SocketComponent implements OnInit {
 
   sendMessge() {
     this.socketService.initSocket();
-    this.socketService.onMessage().subscribe(data => {
+    this.socketService.onMessage("eventFromServer").subscribe(data => {
       this.serverMessage = data;
       this.socketService.disconnectSocket();
     });
-    this.socketService.send(this.message);
+    this.socketService.send("eventFromClient", this.message);
   }
 }

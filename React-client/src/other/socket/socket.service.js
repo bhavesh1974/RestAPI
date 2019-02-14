@@ -8,12 +8,12 @@ const SocketIOService = {
   initSocket() {
     this.socket = io.connect(SERVER_URL);
   },
-  send(message) {
-    this.socket.emit("eventFromClient", message);
+  send(event, message) {
+    this.socket.emit(event, message);
   },
-  onMessage() {
+  onMessage(event) {
     return new Observable(observer => {
-      this.socket.on("eventFromServer", data => observer.next(data));
+      this.socket.on(event, data => observer.next(data));
     });
   },
   disconnectSocket() {

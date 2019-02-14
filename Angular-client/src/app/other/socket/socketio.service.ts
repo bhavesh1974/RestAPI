@@ -12,13 +12,13 @@ export class SocketIOService {
     this.socket = io.connect(SERVER_URL);
   }
 
-  public send(message: string): void {
-    this.socket.emit("eventFromClient", message);
+  public send(event: string, message: string): void {
+    this.socket.emit(event, message);
   }
 
-  public onMessage(): Observable<string> {
+  public onMessage(event: string): Observable<string> {
     return new Observable<string>(observer => {
-      this.socket.on("eventFromServer", (data: string) => observer.next(data));
+      this.socket.on(event, (data: string) => observer.next(data));
     });
   }
 
