@@ -23,6 +23,14 @@ class SideBar extends React.Component {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/socket">
+              <i className="fa fa-list" aria-hidden="true">
+                {" "}
+              </i>{" "}
+              Socket
+            </Link>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="#">
               <i className="fa fa-question-circle" aria-hidden="true">
                 {" "}

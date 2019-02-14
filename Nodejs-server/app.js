@@ -91,13 +91,12 @@ process.on("uncaughtException", function(error) {
 server = http.createServer(app);
 
 const socketIO = require("socket.io")(server);
-socketIO.origins("*:*");
-socketIO.on("connection", function(socket) {
-  console.log(socket.id + " is connected.");
-  socket.on("disconnect", function() {
-    console.log(socket.id + " is disconnected.");
+socketIO.on("connection", function(clientSocket) {
+  console.log(clientSocket.id + " is connected.");
+  clientSocket.on("disconnect", function() {
+    console.log(clientSocket.id + " is disconnected.");
   });
-  socket.on("eventFromClient", function(data) {
+  clientSocket.on("eventFromClient", function(data) {
     socketIO.emit("eventFromServer", "Acknowledge client message " + data);
   });
 });

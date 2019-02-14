@@ -10,6 +10,7 @@ import UploadPicture from "./user/uploadpicture/uploadpicture";
 import ChangePassword from "./user/changepassword/changepassword";
 import lazyLoadComponent from "./shared/hoc/lazyLoadComponent";
 import NotFound from "./notfound";
+import SocketSample from "./other/socket/socket";
 
 const lazyLoadSalesList = lazyLoadComponent(() => import("./sales/list/list"));
 
@@ -37,6 +38,7 @@ class App extends Component {
             <Route path="/uploadpicture" component={UploadPicture} />
             <Route path="/changepassword" component={ChangePassword} />
             <Route path="/sales/list" component={lazyLoadSalesList} />
+            <Route path="/socket" component={SocketSample} />
             <Route path="/" exact component={Home} />
             <Route component={NotFound} />
           </Switch>
