@@ -3,5 +3,5 @@
 </ng-template>
 
 <ng-template [ngIf]="authService.isAuthenticated()">
-  Welcome...
+  Welcome...{{ authService.userName }}
 </ng-template>

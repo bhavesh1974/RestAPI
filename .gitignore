@@ -6,3 +6,13 @@ node_modules
 *.project*
 Spring-server/restapi/target/classes/log4j.properties
 Spring-server/restapi/target/m2e-wtp/web-resources/META-INF/maven/com.bhaveshshah/restapi/pom.properties
+Nodejs-server/logs/2019-02-07.log
+*.log
+EC2-Pwd.txt
+ec2-54-149-157-79.us-west-2.compute.amazonaws.com.rdp
+Nodejs-server/logs/2019-02-07.log
+Spring-server/restapi/target/m2e-wtp/web-resources/META-INF/maven/com.bhaveshshah/restapi/pom.properties
+*.class
+*.class
+*.log
+*.class

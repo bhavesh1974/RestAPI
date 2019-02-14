@@ -57,7 +57,7 @@ class SalesForm extends React.Component {
   };
 
   componentWillReceiveProps(oldProps, newProps) {
-    if (this.props != undefined) {
+    if (this.props !== undefined) {
       let updatedForm = { ...this.state.form };
       updatedForm.customer.value = this.props.editRecord.customer;
       updatedForm.item.value = this.props.editRecord.item;
@@ -231,7 +231,6 @@ class SalesForm extends React.Component {
       <Modal
         size="lg"
         {...this.props}
-        size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
