@@ -27,7 +27,7 @@ const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const salesRoute = require("./routes/sales");
 
-app.use(morgan("dev"));
+app.use(morgan("combined"));
 
 app.use(
   bodyParser.json({
@@ -88,6 +88,7 @@ process.on("uncaughtException", function(error) {
   mailer.sendEmail(data);
 });
 
+debugger;
 server = http.createServer(app);
 
 const socketIO = require("socket.io")(server);
@@ -100,7 +101,7 @@ socketIO.on("connection", function(clientSocket) {
     socketIO.emit("eventFromServer", "Acknowledge client message " + data);
   });
 });
-
+debugger;
 // createPortProxy(8080, config.server.port);
 server.listen(config.server.port);
 logger.info(
@@ -108,3 +109,5 @@ logger.info(
   config.server.port,
   moment().format("DD-MM-YYYY hh:mm:ss:SSS A")
 );
+
+//console.log(process.memoryUsage());
