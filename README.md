@@ -7,6 +7,8 @@ Angular:
 **Component, Directive, Service, Pipe, Router, Lazy Loading, Bootstrap, File Upload, Socket Connection, Hot Module Reload, High-Order Component**
 
   >> AWS S3 Hosted: http://com.bhaveshshah.angular-client.s3-website.ap-south-1.amazonaws.com/
+  
+  ** Successfully configured AWS CodePipeline to pull source code from GitHub using AWS CodeCommit, build through AWS CodeBuild and deploy on S3 through AWS CodeDeploy. Please review buildspec.yml for AWS CodeBuild. **
 
 React:
 **Component, Functional Stateless Component, Redux, Axios, Router, Bootstrap, Lazy Loading, File Upload, Socket Connection**
