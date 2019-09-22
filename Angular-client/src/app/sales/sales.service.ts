@@ -8,14 +8,14 @@ export class SalesService {
   constructor(private apiService: ApiService) {}
 
   getAll() {
-    return this.apiService.get("/sales/getAll", null);
+    return this.apiService.get("/sales/", null);
   }
 
   save(data) {
-    return this.apiService.post("/sales/save", data);
+    return this.apiService.post("/sales/", data);
   }
 
   delete(id) {
-    return this.apiService.delete("/sales/delete/" + id);
+    return this.apiService.delete("/sales/" + id);
   }
 }

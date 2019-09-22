@@ -13,7 +13,9 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {}
 
   post(url: string, data: any) {
-    let headers = new HttpHeaders({ "Content-Type": "application/json" });
+    let headers = new HttpHeaders({
+      "Content-Type": "application/json"
+    });
     return this.httpClient.post(this.urlRoot + url, data, {
       headers: headers,
       reportProgress: true

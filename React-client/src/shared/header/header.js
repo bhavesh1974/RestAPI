@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { NavDropdown, MenuItem } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import SideBar from "../sidebar/sidebar";
+import SubHeader from "./subheader";
 
 class Header extends React.Component {
   handleLogout = () => {

@@ -16,13 +16,14 @@ const transporter = nodemailer.createTransport({
   //     })
 });
 
-module.exports.sendEmail = function (data) {
+module.exports.sendEmail = function(data) {
   admin = () => {
     return {
-      from: "vatsalshah2210@gmail.com",
-      to: "vatsalshah2210@gmail.com",
-      subject: "Error in Speak service",
-      html: "Error Found in at " +
+      from: "bhavesh1974@gmail.com",
+      to: "bhavesh1974@gmail.com",
+      subject: "Error...",
+      html:
+        "Error Found in at " +
         new Date() +
         "\n\n" +
         data.err_msg +
@@ -38,7 +39,7 @@ module.exports.sendEmail = function (data) {
     const name = data.name;
 
     return {
-      from: "vatsalshah2210@gmail.com",
+      from: "bhavesh1974@gmail.com",
       to: email,
       subject: "Verify your account",
       html: `Hello ${name},\n\nPlease verify your account by clicking the <a href=http:\/\/${host}\/auth\/confirmation\/${token}>link.</a>`
@@ -46,8 +47,9 @@ module.exports.sendEmail = function (data) {
   };
 
   const emailData = data.isAdmin === 1 ? admin() : user();
+  console.log(config.email.action);
   if (config.email.action == "true") {
-    transporter.sendMail(emailData, function (error, info) {
+    transporter.sendMail(emailData, function(error, info) {
       if (error) {
         logger.error("Mail Sent Error: ", error);
       } else {

@@ -26,6 +26,7 @@ if (config.applicationDatabase == "MYSQL") {
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const salesRoute = require("./routes/sales");
+const customerRoute = require("./routes/customer");
 
 app.use(morgan("combined"));
 
@@ -54,6 +55,7 @@ app.use(helmet());
 app.use("/restapi/user", userRoute);
 app.use("/restapi/auth", authRoute);
 app.use("/restapi/sales", salesRoute);
+app.use("/restapi/customers", customerRoute);
 
 app.use((req, res, next) => {
   const error = new Error("Not Found");

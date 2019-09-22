@@ -16,3 +16,9 @@ Spring-server/restapi/target/m2e-wtp/web-resources/META-INF/maven/com.bhaveshsha
 *.class
 *.log
 *.class
+Spring-server/restapi/target/m2e-wtp/web-resources/META-INF/maven/com.bhaveshshah/restapi/pom.properties
+Spring-server/restapi/target/classes/com/bhaveshshah/restapi/controller/UserController.class
+Spring-server/restapi/target/classes/com/bhaveshshah/restapi/dao/impl/BaseDaoImpl.class
+Spring-server/restapi/target/classes/com/bhaveshshah/restapi/dao/impl/UserDaoImpl.class
+Spring-server/restapi/target/classes/com/bhaveshshah/restapi/service/AuthenticationInterceptor.class
+*.gz

@@ -7,10 +7,10 @@ module.exports = {
   },
 
   email: {
-    action: process.env.emailAction || false,
+    action: process.env.emailAction || "true",
     key: process.env.emailKey,
-    id: process.env.emailId,
-    password: process.env.emailPassword
+    id: process.env.emailId || "bhavesh1974@gmail.com",
+    password: process.env.emailPassword || ""
   },
 
   mysql: {

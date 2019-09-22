@@ -1,0 +1,85 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="modal-body">
+    <div *ngIf="submitError != ''" class="alert alert-danger">
+      {{ submitError }}
+    </div>
+    <div class="form-group">
+      <label for="customerCode">Code</label>
+      <input
+        type="text"
+        id="customerCode"
+        name="customerCode"
+        [(ngModel)]="customerData.customerCode"
+        #customer="ngModel"
+        required
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="customerName">Name</label>
+      <input
+        type="text"
+        id="customerName"
+        name="customerName"
+        [(ngModel)]="customerData.customerName"
+        #item="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        [(ngModel)]="customerData.address"
+        #item="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        [(ngModel)]="customerData.city"
+        #item="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <input
+        type="text"
+        id="state"
+        name="state"
+        [(ngModel)]="customerData.state"
+        #item="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        [(ngModel)]="customerData.phone"
+        #item="ngModel"
+        required
+        class="form-control input-sm"
+      />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary" (click)="closeForm()">
+      Close
+    </button>
+  </div>
+</form>

@@ -19,7 +19,15 @@ class SideBar extends React.Component {
               <i className="fa fa-list" aria-hidden="true">
                 {" "}
               </i>{" "}
-              List
+              Sales
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/customers/list">
+              <i className="fa fa-list" aria-hidden="true">
+                {" "}
+              </i>{" "}
+              Customers
             </Link>
           </li>
           <li className="nav-item">

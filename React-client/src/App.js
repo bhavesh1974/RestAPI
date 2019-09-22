@@ -8,6 +8,7 @@ import Header from "./shared/header/header";
 import UpdateProfile from "./user/updateprofile/updateprofile";
 import UploadPicture from "./user/uploadpicture/uploadpicture";
 import ChangePassword from "./user/changepassword/changepassword";
+import Customer from "./customer/list/list";
 import lazyLoadComponent from "./shared/hoc/lazyLoadComponent";
 import NotFound from "./notfound";
 import SocketSample from "./other/socket/socket";
@@ -38,6 +39,7 @@ class App extends Component {
             <Route path="/uploadpicture" component={UploadPicture} />
             <Route path="/changepassword" component={ChangePassword} />
             <Route path="/sales/list" component={lazyLoadSalesList} />
+            <Route path="/customers/list" component={Customer} />
             <Route path="/socket" component={SocketSample} />
             <Route path="/" exact component={Home} />
             <Route component={NotFound} />

@@ -3,6 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./shared/home/home.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { SocketComponent } from "./other/socket/socket.component";
+import { SalesListComponent } from "./sales/list/sales-list.component";
+import { CustomerListComponent } from "./customer/list/customer-list.component";
 
 const routes: Routes = [
   {
@@ -11,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: "sales",
-    loadChildren: "./sales/sales.module#SalesModule"
+    component: SalesListComponent
+  },
+  {
+    path: "customers",
+    component: CustomerListComponent
   },
   {
     path: "404",
