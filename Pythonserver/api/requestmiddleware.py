@@ -13,12 +13,12 @@ class RequestMiddleware(object):
         if (request.path.find('forgotpassword') == -1 and request.path.find('signin') == -1 and request.path.find('signup') == -1):
             authHeader = request.META.get('HTTP_AUTHORIZATION')
             if (authHeader == None):
-                return self.unauthorized_response(request)
+                return self.unauthorized_response(request, 'Authorization token is not provided.')
 
             if authHeader.find('Bearer') > -1:
                 token = authHeader.split(" ")[1]
             else:
-                return self.unauthorized_response(request)
+                return self.unauthorized_response(request, 'Invalid Token.')
 
             payload = jwt.decode(token, 'speakSuperJWTSecret')
             userId = payload.get('userId')
@@ -32,9 +32,9 @@ class RequestMiddleware(object):
 
         return self.get_response(request)
 
-    def unauthorized_response(self, request):
+    def unauthorized_response(self, request, message):
         response = Response(
-            {"data": "Not Authorized."},
+            {"data": message},
             content_type="application/json",
             status=401,
         )
