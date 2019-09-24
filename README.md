@@ -1,6 +1,6 @@
-# RestAPI
+# Rest API
 It includes Frontends developed in Angular and React.
-It includes Backends (RESTAPI) developed in Node.js and Java/Spring. You can use Mongo or MySQL as a database. You can also use Hibernate ORM (Spring) for Java/Spring RESTAPI.
+It includes Backends (RESTAPI) developed in Node.js/Expess.js, Java/Spring and Python/Django. You can use Mongo or MySQL as a database. You can also use Hibernate ORM (Spring) for Java/Spring RESTAPI.
      You need to set property to configure database in the config/config.js (Node.js) or WEB-INF/application.properties. 
      
 Angular:
@@ -24,6 +24,5 @@ Java:
 **Spring, Jackson, log4j, Mongo, MySql, Hibernate, JWT, File upload, Swagger**
 
 
-It is not clean or perfect code. There is a LOT to improve in the code and I leave up to you to do your best for this. It is just to display different way of coding for different things. ** Please note that it is not about fancy UI. It is about how things can be done in Angular, React, Node.js or Java/Spring. **
+It is not clean or perfect code. There is a LOT to improve in the code and I leave up to you to do your best for this. It is just to display different way of coding for different things. ** Please note that it is not about fancy UI. It is about how things can be done in Angular, React, Node.js, Java/Spring and Python/Django. **
 
-MORE COMING UP...HANG IN THERE...:)
