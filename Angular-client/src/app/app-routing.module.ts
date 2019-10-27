@@ -5,6 +5,7 @@ import { NotfoundComponent } from "./notfound/notfound.component";
 import { SocketComponent } from "./other/socket/socket.component";
 import { SalesListComponent } from "./sales/list/sales-list.component";
 import { CustomerListComponent } from "./customer/list/customer-list.component";
+import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: "customers",
     component: CustomerListComponent
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent
   },
   {
     path: "404",

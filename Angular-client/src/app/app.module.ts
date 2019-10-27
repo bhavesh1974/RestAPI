@@ -22,6 +22,8 @@ import { LogService, LogLevel } from "./shared/services/log.service";
 import { OtherModule } from "./other/other.module";
 import { SalesModule } from "./sales/sales.module";
 import { CustomerModule } from "./customer/customer.module";
+import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
+import { HighchartsChartComponent } from "highcharts-angular";
 
 let logger = new LogService();
 logger.minimumLevel = LogLevel.DEBUG;
@@ -33,6 +35,8 @@ logger.minimumLevel = LogLevel.DEBUG;
     FooterComponent,
     SidebarComponent,
     HomeComponent,
+    DashboardComponent,
+    HighchartsChartComponent,
     NotfoundComponent
   ],
   imports: [

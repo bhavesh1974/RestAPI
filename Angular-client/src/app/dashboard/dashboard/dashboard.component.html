@@ -1,0 +1,11 @@
+Change Chart Style:
+<select
+  class="btn btn-sm btn-primary btn-create"
+  (change)="changeChart($event.target.value)"
+>
+  <option>Bar</option>
+  <option>Column</option>
+  <option>Line</option>
+</select>
+
+<div id="container" style="width:100%;"></div>
