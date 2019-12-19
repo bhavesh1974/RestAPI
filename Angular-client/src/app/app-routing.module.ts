@@ -6,6 +6,7 @@ import { SocketComponent } from "./other/socket/socket.component";
 import { SalesListComponent } from "./sales/list/sales-list.component";
 import { CustomerListComponent } from "./customer/list/customer-list.component";
 import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
+import { FormsampleComponent } from "./formsample/formsample.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "dashboard",
     component: DashboardComponent
+  },
+  {
+    path: "formsample",
+    component: FormsampleComponent
   },
   {
     path: "404",

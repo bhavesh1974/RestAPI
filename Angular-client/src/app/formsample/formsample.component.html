@@ -1,0 +1,6 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <app-textbox [control]="code" [group]="formGroup"></app-textbox>
+  <app-textbox [control]="name" [group]="formGroup"></app-textbox>
+  <app-textbox [control]="gender" [group]="formGroup"></app-textbox>
+  <input type="submit" value="Submit" />
+</form>

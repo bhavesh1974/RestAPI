@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./shared/panels/header/header.component";
 import { FooterComponent } from "./shared/panels/footer/footer.component";
@@ -24,6 +24,8 @@ import { SalesModule } from "./sales/sales.module";
 import { CustomerModule } from "./customer/customer.module";
 import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
 import { HighchartsChartComponent } from "highcharts-angular";
+import { FormsampleComponent } from "./formsample/formsample.component";
+import { TextboxComponent } from "./shared/component/textbox/textbox.component";
 
 let logger = new LogService();
 logger.minimumLevel = LogLevel.DEBUG;
@@ -37,11 +39,14 @@ logger.minimumLevel = LogLevel.DEBUG;
     HomeComponent,
     DashboardComponent,
     HighchartsChartComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    FormsampleComponent,
+    TextboxComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     UserModule,
     AuthModule,

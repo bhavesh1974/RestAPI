@@ -2,12 +2,7 @@
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-addon"><i class="fa fa-search"></i></div>
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Search Customer"
-        (keyup)="filterList($event)"
-      />
+      <input type="text" class="form-control" placeholder="Search Customer" (keyup)="filterList($event)" />
     </div>
   </div>
 </form>
@@ -21,11 +16,7 @@
             <h3 class="panel-title">Customers</h3>
           </div>
           <div class="col col-xs-6 text-right">
-            <button
-              type="button"
-              class="btn btn-sm btn-primary btn-create"
-              (click)="addForm(customerForm)"
-            >
+            <button type="button" class="btn btn-sm btn-primary btn-create" (click)="addForm(customerForm)">
               Add Customer
             </button>
           </div>
@@ -47,9 +38,7 @@
           </thead>
           <tbody>
             <tr></tr>
-            <tr
-              *ngFor="let record of filterCustomers; let recordNumber = index"
-            >
+            <tr *ngFor="let record of filterCustomers; let recordNumber = index">
               <th scope="row" class="text-center">{{ recordNumber + 1 }}</th>
               <td>{{ record.customerCode }}</td>
               <td>{{ record.customerName }}</td>
@@ -58,9 +47,7 @@
               <td>{{ record.state }}</td>
               <td>{{ record.phone }}</td>
               <td class="text-center">
-                <a (click)="editForm(customerForm, record)"
-                  ><i class="fa fa-pencil"></i></a
-                >&nbsp;
+                <a (click)="editForm(customerForm, record)"><i class="fa fa-pencil"></i></a>&nbsp;
                 <a (click)="delete(record)"><i class="fa fa-trash"></i></a>
               </td>
             </tr>
@@ -84,9 +71,6 @@
   </div>
 </div>
 <ng-template #customerForm>
-  <customer-form
-    [customerData]="customerData"
-    (closeFormEvent)="closeForm()"
-    (submitFormEvent)="submitForm($event)"
-  ></customer-form>
+  <customer-form [customerData]="customerData" (closeFormEvent)="closeForm()" (submitFormEvent)="submitForm($event)">
+  </customer-form>
 </ng-template>
