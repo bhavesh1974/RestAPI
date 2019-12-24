@@ -26,6 +26,7 @@ import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
 import { HighchartsChartComponent } from "highcharts-angular";
 import { FormsampleComponent } from "./formsample/formsample.component";
 import { TextboxComponent } from "./shared/component/textbox/textbox.component";
+import { FormService } from "./shared/services/form.service";
 
 let logger = new LogService();
 logger.minimumLevel = LogLevel.DEBUG;
@@ -61,6 +62,7 @@ logger.minimumLevel = LogLevel.DEBUG;
   providers: [
     AuthGuard,
     ApiService,
+    FormService,
     FlashService,
     {
       provide: HTTP_INTERCEPTORS,

@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl } from "@angular/forms";
+import { FormGroup, FormControl, FormBuilder } from "@angular/forms";
 import { FormTextbox } from "../shared/component/formcontroltextbox";
 import { FormControlBase } from "../shared/component/formcontrolbase";
+import { FormService } from "../shared/services/form.service";
 
 @Component({
   selector: "app-formsample",
@@ -13,41 +14,24 @@ export class FormsampleComponent implements OnInit {
   code: FormControlBase;
   name: FormControlBase;
   gender: FormControlBase;
+  controls: FormControlBase[] = [];
 
-  constructor() {}
+  constructor(private formService: FormService) {}
 
   ngOnInit() {
     this.initFormControls();
-    this.initFormGroup();
   }
 
   initFormControls() {
-    this.code = new FormTextbox({
-      controlName: "code",
-      value: "CUST001"
-    });
+    this.code = this.formService.initControl("code", "CUSt001");
+    this.name = this.formService.initControl("name", "Bhavesh");
+    this.gender = this.formService.initControl("gender", "Male");
+    this.formGroup = this.formService.initFormGroup(this);
 
-    this.name = new FormTextbox({
-      controlName: "name",
-      value: "Bhavesh"
-    });
-
-    this.gender = new FormTextbox({
-      controlName: "gender",
-      value: "Male"
-    });
-  }
-
-  initFormGroup() {
-    let group: any = {};
-    for (var prop in this) {
-      if (prop == "") continue;
-      if (this.hasOwnProperty(prop)) {
-        group[prop] = new FormControl(this[prop]["value"]);
-      }
-    }
-
-    this.formGroup = new FormGroup(group);
+    this.controls.push(this.formService.initControl("code", "CUST001"));
+    this.controls.push(this.formService.initControl("name", "Bhavesh"));
+    this.controls.push(this.formService.initControl("gender", "Male"));
+    this.formGroup = this.formService.initFormGroupFromArray(this.controls);
   }
 
   onSubmit() {

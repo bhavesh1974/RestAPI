@@ -113,3 +113,6 @@ logger.info(
 );
 
 //console.log(process.memoryUsage());
+
+// shared = require("nodejsshared").sharedFile
+// console.log(shared.sharedFunction())
