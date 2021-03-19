@@ -1,4 +1,4 @@
 Django==2.1.2
 python_bcrypt==0.3.2
 PyJWT==1.7.1
-djangorestframework==3.10.3
+djangorestframework==3.11.2
