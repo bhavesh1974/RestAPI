@@ -26,7 +26,7 @@
     "mysql": "^2.16.0",
     "mysql2": "^1.6.4",
     "node-rest-client": "^3.1.0",
-    "nodemailer": "^5.0.0",
+    "nodemailer": "^6.4.16",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "shortid": "^2.2.14",
     "socket.io": "^2.2.0",
